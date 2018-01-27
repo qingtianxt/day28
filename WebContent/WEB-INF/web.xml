@@ -19,4 +19,14 @@
     <servlet-name>SaveCustomer</servlet-name>
     <url-pattern>/saveCustomer</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListCustomer</display-name>
+    <servlet-name>ListCustomer</servlet-name>
+    <servlet-class>servlet.ListCustomer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListCustomer</servlet-name>
+    <url-pattern>/ListCustomer</url-pattern>
+  </servlet-mapping>
 </web-app>

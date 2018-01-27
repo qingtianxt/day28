@@ -237,7 +237,7 @@ public class Demo1 {
 		Session session = factory.openSession();
 		//4,开启事务
 		Transaction tr = session.beginTransaction();
-		//5.填写保存的代码
+		//5.填写保存的代码（操作对象相当于操作数据表）
 			Customer c = new Customer();
 			c.setCust_name("测试");
 			c.setCust_level("110");

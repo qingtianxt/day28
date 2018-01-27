@@ -18,7 +18,7 @@
 			<!-- 格式化sql语句，需要加上show_sql否则不会显示-->
 			<property name="hibernate.format_sql">true</property>
 			<!-- 生成数据库的表结构 
-				update ：如果没有表结构，创建表结构，如果存在不会创建，添加数据
+				update ：如果没有表结构，创建表结构，如果存在不会创建，添加数据，update可以添加表结构，不能删除表结构
 			-->
 				<property name="hibernate.hbm2ddl.auto">update</property>
 			

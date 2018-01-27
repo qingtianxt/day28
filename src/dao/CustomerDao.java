@@ -1,5 +1,8 @@
 package dao;
 
+import java.util.List;
+
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -22,5 +25,21 @@ public class CustomerDao {
 		//关闭资源
 		session.close();
 		
+	}
+	
+	/**
+	 * 查询所有的客户
+	 */
+	public List<Customer> findAll(){
+		//QBC查询
+		Session session = HibernateUtils.getSession();
+		Transaction tr = session.beginTransaction();
+		
+		Criteria criteria = session.createCriteria(Customer.class);
+		List<Customer> list = criteria.list();
+		
+		tr.commit();
+		session.close();
+		return list;
 	}
 }
